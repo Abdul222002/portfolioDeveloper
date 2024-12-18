@@ -1,0 +1,70 @@
+{
+    "nombre": "Abdul Hakim",
+    "apellidos": "Byaz Iglesias",
+    "edad": 22,
+    "profesion": "Estudiante",
+    "certificados": ["B2 inglés", "TSEAS"],
+    "experiencia": [
+      {
+        "nombre de la empresa": "Vinos C.D.",
+        "funciones": ["Reparto de vinos", "Atención al cliente"],
+        "tiempo": "2023/2024"
+      },
+      {
+        "nombre de la empresa": "Radio Onda Electrodoméstico",
+        "funciones": ["Reparto de electrodomésticos", "Carga y descarga de mercancías"],
+        "tiempo": "2020/2023"
+      },
+      {
+        "nombre de la empresa": "Dependiente Multicentro",
+        "funciones": [
+          "Atención al cliente",
+          "Montaje de escaparates",
+          "Recuento de mercancías",
+          "Decoración de estancias"
+        ],
+        "tiempo": "2018/2019"
+      }
+    ],
+    "formacion": [
+      {
+        "fecha": "2020-2022",
+        "nombre": "CFGS TSEAS, CFI Reina Isabel"
+      },
+      {
+        "fecha": "2018-2020",
+        "nombre": "Bachillerato de Ciencias de la Salud, IES Laurel De La Reina"
+      },
+      {
+        "fecha": "2014-2018",
+        "nombre": "Educación Secundaria - IES Laurel De La Reina"
+      },
+      {
+        "fecha": "2023",
+        "nombre": "B2 Inglés, IML"
+      },
+      {
+        "fecha": "2023",
+        "nombre": "Carnet de Vehículo Elevador"
+      }
+    ],
+    "otras_competencias": [
+      "Rápidez de aprendizaje",
+      "Adaptación al trabajo activo",
+      "Trabajo en equipo",
+      "Flexibilidad horaria",
+      "Manejo de Office",
+      "Habilidad de comunicación",
+      "Carnet B de coche"
+    ],
+    "informacion_complementaria": [
+      "Curso de Seguridad Informática",
+      "Curso de Alfabetización Digital",
+      "Curso de Primeros Auxilios",
+      "Microsoft Office",
+      "Independencia profesional",
+      "Programación en Java",
+      "Programación en Python"
+    ]
+  }
+  
