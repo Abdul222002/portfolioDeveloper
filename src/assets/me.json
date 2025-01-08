@@ -1,70 +1,48 @@
 {
-    "nombre": "Abdul Hakim",
-    "apellidos": "Byaz Iglesias",
-    "edad": 22,
-    "profesion": "Estudiante",
-    "certificados": ["B2 inglés", "TSEAS"],
-    "experiencia": [
-      {
-        "nombre de la empresa": "Vinos C.D.",
-        "funciones": ["Reparto de vinos", "Atención al cliente"],
-        "tiempo": "2023/2024"
-      },
-      {
-        "nombre de la empresa": "Radio Onda Electrodoméstico",
-        "funciones": ["Reparto de electrodomésticos", "Carga y descarga de mercancías"],
-        "tiempo": "2020/2023"
-      },
-      {
-        "nombre de la empresa": "Dependiente Multicentro",
-        "funciones": [
-          "Atención al cliente",
-          "Montaje de escaparates",
-          "Recuento de mercancías",
-          "Decoración de estancias"
-        ],
-        "tiempo": "2018/2019"
-      }
-    ],
-    "formacion": [
-      {
-        "fecha": "2020-2022",
-        "nombre": "CFGS TSEAS, CFI Reina Isabel"
-      },
-      {
-        "fecha": "2018-2020",
-        "nombre": "Bachillerato de Ciencias de la Salud, IES Laurel De La Reina"
-      },
-      {
-        "fecha": "2014-2018",
-        "nombre": "Educación Secundaria - IES Laurel De La Reina"
-      },
-      {
-        "fecha": "2023",
-        "nombre": "B2 Inglés, IML"
-      },
-      {
-        "fecha": "2023",
-        "nombre": "Carnet de Vehículo Elevador"
-      }
-    ],
-    "otras_competencias": [
-      "Rápidez de aprendizaje",
-      "Adaptación al trabajo activo",
-      "Trabajo en equipo",
-      "Flexibilidad horaria",
-      "Manejo de Office",
-      "Habilidad de comunicación",
-      "Carnet B de coche"
-    ],
-    "informacion_complementaria": [
-      "Curso de Seguridad Informática",
-      "Curso de Alfabetización Digital",
-      "Curso de Primeros Auxilios",
-      "Microsoft Office",
-      "Independencia profesional",
-      "Programación en Java",
-      "Programación en Python"
-    ]
-  }
-  
+  "nombre": "Abdul Hakim Byaz Iglesias",
+  "profesion": "Estudiante",
+  "bio": "Soy un estudiante de programación de Granada, actualmente cursando estudios en el IES HLANZ. ¡Genial, verdad? Me apasiona la tecnología y disfruto explorando nuevas tendencias en el desarrollo de software. Mi enfoque está en construir soluciones innovadoras y aprender continuamente para mantenerme al día en este campo en constante evolución.",
+  "experiencia": [
+    {
+      "nombre": "Vinos C.D.",
+      "descripcion": ["Reparto de vinos", "Atención al cliente"],
+      "fecha": "2023/2024"
+    },
+    {
+      "nombre": "Radio Onda Electrodoméstico",
+      "descripcion": ["Reparto de electrodomésticos", "Carga y descarga de mercancías"],
+      "fecha": "2020/2023"
+    },
+    {
+      "nombre": "Dependiente Multicentro",
+      "descripcion": [
+        "Atención al cliente",
+        "Montaje de escaparates",
+        "Recuento de mercancías",
+        "Decoración de estancias"
+      ],
+      "fecha": "2018/2019"
+    }
+  ],
+  "habilidades": [
+    "Manejo de Office",
+    "Carnet B de coche",
+    "Programación en Java",
+    "Programación en Python",
+    "Microsoft Office",
+    "Carnet de Vehículo Elevador"
+  ],
+  "soft_skills": [
+    "Rápidez de aprendizaje",
+    "Adaptación al trabajo activo",
+    "Trabajo en equipo",
+    "Flexibilidad horaria",
+    "Habilidad de comunicación",
+    "Independencia profesional"
+  ],
+  "informacion_complementaria": [
+    "Curso de Seguridad Informática",
+    "Curso de Alfabetización Digital",
+    "Curso de Primeros Auxilios"
+  ]
+}

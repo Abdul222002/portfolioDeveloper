@@ -1,16 +1,86 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-const {default:meData}= await import('../assets/me.json');
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const { default: meData } = await import('../assets/me.json');
 ---
 
 <Layout>
-	<h1>{meData.nombre}</h1>
-	<h2>{meData.apellidos}</h2>
-	<h2>{meData.certificados}</h2>
-	<h2>{meData.profesion}</h2>
-	<h2>{meData.formacion}</h2>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#biografia">Biografía</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>{meData.nombre}</h1>
+      <h2>{meData.profesion}</h2>
+      <p>¡Hola! Soy {meData.nombre}, estudiante apasionado por la tecnología y la programación.</p>
+    </section>
+
+    <!-- Biografía -->
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <p>{meData.bio}</p>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia">
+      <h2>Experiencia</h2>
+      <ul>
+        {meData.experiencia.map((exp) => (
+          <li>
+            <strong>{exp.nombre} ({exp.fecha}):</strong>
+            <ul>
+              {exp.descripcion.map((desc) => (
+                <li>{desc}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        {meData.habilidades.map((habilidad) => (
+          <li>{habilidad}</li>
+        ))}
+      </ul>
+      <h3>Habilidades Blandas</h3>
+      <ul>
+        {meData.soft_skills.map((skill) => (
+          <li>{skill}</li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Información Complementaria -->
+    <section id="info-complementaria">
+      <h2>Información Complementaria</h2>
+      <ul>
+        {meData.informacion_complementaria.map((info) => (
+          <li>{info}</li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres saber más? ¡Contáctame!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {new Date().getFullYear()} {meData.nombre}. Todos los derechos reservados.</p>
+  </footer>
 </Layout>
