@@ -1,40 +1,10 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 const { default: meData } = await import('../assets/me.json');
 ---
 <Layout>
   <h1>{meData.nombre}</h1>
-  <h2>{meData.profesion}</h2>
-
-  <section>
-    <h3>Biografía</h3>
-    <p>{meData.bio}</p>
-  </section>
-
-  <section>
-    <h3>Experiencia</h3>
-    <ul>
-      {meData.experiencia.map((exp) => (
-        <li>
-          <strong>{exp.nombre} ({exp.fecha}):</strong>
-          <ul>
-            {exp.descripcion.map((desc) => (
-              <li>{desc}</li>
-            ))}
-          </ul>
-        </li>
-      ))}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Habilidades</h3>
-    <ul>
-      {meData.habilidades.map((habilidad) => (
-        <li>{habilidad}</li>
-      ))}
-    </ul>
-  </section>
+  <p>{meData.profesion}</p>
+  <p>{meData.bio}</p>
 </Layout>
-
+ 
