@@ -1,10 +1,11 @@
 /* General styles for the HTML document */
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black !important;
+    background-color: yellow!important;
 }
 section {
     max-width: 900px;
+    margin-top: 84px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -91,3 +92,26 @@ section {
 .hero p{
     margin: 0px;
 }
+
+.enlace-proyecto:hover {
+    text-underline-offset: none;
+    color: yellow;
+    text-decoration: none; /* Cambiado a none para eliminar el subrayado */
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.proyecto{
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.proyecto:hover{
+    background-color: gray ;
+}
+
