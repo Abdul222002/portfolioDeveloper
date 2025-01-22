@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/layout"
+layout: "../../layouts/Layout.astro"
 title: "Proyecto de paintball"
 description: "Este es un proyecto de paintball creada en alhendin"
 url : "my-project"
