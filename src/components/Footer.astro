@@ -1,15 +1,26 @@
 ---
-import Github from "./icons/github.astro";
-import Instagram from "./icons/instagram.astro";
-import Linkedink from "./icons/linkedink.astro";
+import Github from "./icons/Github.astro";
+import Instagram from "./icons/Instagram.astro";
+import Linkedink from "./icons/Linkedin.astro";
 ---
 
 <footer>
     <nav>
         <ul>
-            <li><a href=""><Instagram/a></li>
-            <li><a href=""><Github/a></li>
-            <li><a href=""><Linkedink/a></li>
+            <li>
+                <a href="https://www.instagram.com/abduul__22/">
+                    <Instagram />
+                </a>
+            </li>
+            <li><a href="https://github.com/Abdul200229">    
+                <Github />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/abdul-hakim-byaz-iglesias-b1b921207/">
+                    <Linkedink />
+                </a>
+                </li>
         </ul>
     </nav>
 </footer>
@@ -24,7 +35,7 @@ import Linkedink from "./icons/linkedink.astro";
         align-items: center;
     }
 
-    nav {
+    ul {
         padding: 16px;
         display: flex;
         flex-direction: row;
@@ -34,6 +45,10 @@ import Linkedink from "./icons/linkedink.astro";
 
     li {
         list-style: none;
+    }
+
+    a {
+        color: white;
     }
 
 </style>

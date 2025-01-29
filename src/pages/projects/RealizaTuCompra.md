@@ -1,6 +1,7 @@
 ---
-title: "Aplicacio Listas Supermarket"
-description: "Este es un proyecto de un APP de la lista de la compra"
+layout: "../../layouts/Layout.astro"
+title: "Proyecto aplicacion Web"
+description: "Este es una aplicacion web que ayuda a las personas a realizar la compra de manera mas efectiva"
 url : "my-project"
 
 ---
