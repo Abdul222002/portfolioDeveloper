@@ -94,7 +94,6 @@ section {
 }
 
 .enlace-proyecto:hover {
-    text-underline-offset: none;
     color:black;
     text-decoration: none; /* Cambiado a none para eliminar el subrayado */
     transition: color 0.3s ease-in-out;
@@ -102,7 +101,10 @@ section {
     transform: scale(1.05);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+.enlace-proyecto{
+    text-decoration: none;
+    color: rgb(49, 48, 48);
+}
 
 .proyecto{
     padding: 16px;
