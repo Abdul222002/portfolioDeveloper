@@ -1,62 +1,285 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-interface Project {
-  title: string
-  description: string
-}
-
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { default: meData } = await import('../assets/me.json');
-
-const projects = await Astro.glob<Project>("../pages/projects/*.md")
-console.log(projects)
+const { default: me } = await import('../assets/me.json');
 ---
 <Layout>
   <Header />
+
+  <!-- HERO -->
   <section class="hero" id="inicio">
-    <h1 class="nombre">{meData.nombre}</h1>
-    <p class="profesion">{meData.profesion}</p>
-    <p class="bio">{meData.bio}</p>
+    <div class="hero-badge"><span class="dot"></span> Disponible para trabajar</div>
+    <h1 class="hero-name">
+      Abdul Hakim<br/>
+      <span class="gradient-text">Byaz Iglesias</span>
+    </h1>
+    <p class="hero-title">{me.profesion}</p>
+    <p class="hero-bio">{me.bio}</p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-primary">📬 Contacto</a>
+      <a href="#proyectos" class="btn-secondary">👁️ Ver Proyectos</a>
+      <a href={me.github} target="_blank" rel="noopener" class="btn-secondary">⚡ GitHub</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">20+</div><div class="stat-label">Tecnologías</div></div>
+      <div class="stat"><div class="stat-number">2+</div><div class="stat-label">Proyectos Full Stack</div></div>
+      <div class="stat"><div class="stat-number">2026</div><div class="stat-label">CFGS DAW</div></div>
+    </div>
   </section>
-  
 
-
-	<section id="proyectos">
-		<h2>Proyectos</h2>
-		{projects.map((project) => (
-			<a href={project.url} class="enlace-proyecto">
-				<article class="proyecto">
-					<h3>{project.frontmatter.title}</h3>
-					<p>{project.frontmatter.description}</p>
-				</article>
-			</a>
-		))}
-	</section>
-
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Sobre mí</span>
+      <h2 class="section-title">Perfil Profesional</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-content animate-on-scroll">
+      <div class="about-text">
+        <p>{me.bio}</p>
+        <p>{me.bioExtendida}</p>
+      </div>
+      <div class="about-info">
+        <div class="info-item">
+          <div class="label">Ubicación</div>
+          <div class="value">📍 {me.ubicacion}</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Email</div>
+          <div class="value"><a href={`mailto:${me.email}`}>{me.email}</a></div>
+        </div>
+        <div class="info-item">
+          <div class="label">Teléfono</div>
+          <div class="value">📱 {me.telefono}</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Carnet</div>
+          <div class="value">🚗 {me.carnet}</div>
+        </div>
+        <div class="info-item">
+          <div class="label">LinkedIn</div>
+          <div class="value"><a href={me.linkedin} target="_blank" rel="noopener">Ver perfil</a></div>
+        </div>
+        <div class="info-item">
+          <div class="label">GitHub</div>
+          <div class="value"><a href={me.github} target="_blank" rel="noopener">Abdul222002</a></div>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="experiencia">
-    <h2>Experiencia</h2>
-      {meData.experiencia.map((exp) => (
-        <article class="experiencia">
-        <p class="experiencia-nombre">{exp.nombre}</p>
-        <p class="eperiencia-drescripcion">{exp.descripcion}</p>
-        <p class="eperiencia-fecha">{exp.fecha}</p>
-        </article>
+
+  <!-- TECNOLOGÍAS -->
+  <section id="tecnologias" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Tech Stack</span>
+      <h2 class="section-title">Tecnologías</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="tech-categories animate-on-scroll">
+      <div class="tech-category">
+        <div class="tech-category-title">⚡ Frontend</div>
+        <div class="tech-list">
+          {me.tecnologias.frontend.map((t: {nombre: string; icono: string}) => (
+            <span class="tech-tag"><span class="tech-icon">{t.icono}</span>{t.nombre}</span>
+          ))}
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-title">🔧 Backend</div>
+        <div class="tech-list">
+          {me.tecnologias.backend.map((t: {nombre: string; icono: string}) => (
+            <span class="tech-tag"><span class="tech-icon">{t.icono}</span>{t.nombre}</span>
+          ))}
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-title">🗄️ Bases de Datos</div>
+        <div class="tech-list">
+          {me.tecnologias.basesdatos.map((t: {nombre: string; icono: string}) => (
+            <span class="tech-tag"><span class="tech-icon">{t.icono}</span>{t.nombre}</span>
+          ))}
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-title">🚀 DevOps & Herramientas</div>
+        <div class="tech-list">
+          {me.tecnologias.devops.map((t: {nombre: string; icono: string}) => (
+            <span class="tech-tag"><span class="tech-icon">{t.icono}</span>{t.nombre}</span>
+          ))}
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-title">🤖 IA & Automatización</div>
+        <div class="tech-list">
+          {me.tecnologias.ia.map((t: {nombre: string; icono: string}) => (
+            <span class="tech-tag"><span class="tech-icon">{t.icono}</span>{t.nombre}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section id="formacion" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Formación</span>
+      <h2 class="section-title">Formación Académica</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline animate-on-scroll">
+      {me.formacion.map((f: {titulo: string; centro: string; ubicacion: string; fecha: string; descripcion: string}) => (
+        <div class="timeline-item">
+          <span class="timeline-date">{f.fecha}</span>
+          <h3 class="timeline-title">{f.titulo}</h3>
+          <p class="timeline-subtitle">📍 {f.centro} — {f.ubicacion}</p>
+          <p style="color: #9ca3af; font-size: 15px; line-height: 1.7;">{f.descripcion}</p>
+        </div>
       ))}
-    
+    </div>
   </section>
-  <section id="habilidades">
-    <h2>Habilidades</h2>
-    <div class="envoltura-habilidades">
-      {meData.habilidades.map((habilidad) => (
-        <article class="habilidad">
-          <p>{habilidad}</p>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Proyectos</span>
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+      {me.proyectos.map((p: {titulo: string; subtitulo: string; descripcion: string; github?: string; url?: string; tecnologias: string[]; funcionalidades: string[]; destacado: boolean}) => (
+        <article class={`project-card animate-on-scroll ${p.destacado ? 'featured' : ''}`}>
+          {p.destacado && <span class="project-badge">⭐ Proyecto Destacado</span>}
+          {!p.destacado && <span class="project-badge">{p.subtitulo}</span>}
+          <h3 class="project-title">{p.titulo}</h3>
+          <p class="project-description">{p.descripcion}</p>
+          <div class="project-tech">
+            {p.tecnologias.map((t: string) => (
+              <span class="project-tech-tag">{t}</span>
+            ))}
+          </div>
+          <div class="project-features">
+            {p.funcionalidades.map((f: string) => (
+              <span class="project-feature">{f}</span>
+            ))}
+          </div>
+          <div class="project-links">
+            {p.github && <a href={p.github} target="_blank" rel="noopener" class="project-link">🐙 GitHub</a>}
+            {p.url && <a href={p.url} target="_blank" rel="noopener" class="project-link">🌐 Ver Web</a>}
+          </div>
         </article>
       ))}
     </div>
   </section>
+
+  <!-- EXPERIENCIA LABORAL -->
+  <section id="experiencia" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Experiencia</span>
+      <h2 class="section-title">Experiencia Laboral</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline animate-on-scroll">
+      {me.experienciaLaboral.map((exp: {puesto: string; empresa: string; fecha: string; tareas: string[]}) => (
+        <div class="timeline-item">
+          <span class="timeline-date">{exp.fecha}</span>
+          <h3 class="timeline-title">{exp.puesto}</h3>
+          <p class="timeline-subtitle">🏢 {exp.empresa}</p>
+          <ul class="timeline-tasks">
+            {exp.tareas.map((t: string) => (
+              <li>{t}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- COMPETENCIAS & IDIOMAS -->
+  <section id="competencias" style={`margin-top: var(--section-gap)`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Habilidades</span>
+      <h2 class="section-title">Competencias & Idiomas</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="skills-grid animate-on-scroll">
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; color: #f0f0f5; margin-bottom: 24px;">Competencias</h3>
+        <div class="competencias-list">
+          {me.competencias.map((c: string, i: number) => (
+            <div class="competencia-item">
+              <span class="competencia-icon">{['🧩','🚀','👥','📚','💬','🔍','📋','✅'][i] || '💡'}</span>
+              <span>{c}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 700; color: #f0f0f5; margin-bottom: 24px;">Idiomas</h3>
+        <div class="idiomas-list">
+          {me.idiomas.map((lang: {idioma: string; nivel: string}) => (
+            <div class="idioma-item">
+              <div class="idioma-name">{lang.idioma}</div>
+              <div class="idioma-level">{lang.nivel}</div>
+              <div class="idioma-bar">
+                <div class="idioma-bar-fill" style={`width: ${lang.nivel === 'Nativo' ? '100%' : '75%'}`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style="margin-top: 32px; padding: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;">
+          <h4 style="font-size: 16px; font-weight: 700; color: #f0f0f5; margin-bottom: 12px;">🎯 Objetivo Profesional</h4>
+          <p style="font-size: 14px; color: #9ca3af; line-height: 1.7;">{me.objetivoProfesional}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" style={`margin-top: var(--section-gap); padding-bottom: 40px;`}>
+    <div class="section-header animate-on-scroll">
+      <span class="section-label">// Contacto</span>
+      <h2 class="section-title">¿Hablamos?</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-grid animate-on-scroll">
+      <a href={`mailto:${me.email}`} class="contact-card">
+        <div class="contact-icon">📧</div>
+        <div class="contact-info">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">{me.email}</div>
+        </div>
+      </a>
+      <a href={`tel:+34${me.telefono.replace(/\s/g, '')}`} class="contact-card">
+        <div class="contact-icon">📱</div>
+        <div class="contact-info">
+          <div class="contact-label">Teléfono</div>
+          <div class="contact-value">{me.telefono}</div>
+        </div>
+      </a>
+      <a href={me.linkedin} target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon">💼</div>
+        <div class="contact-info">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">Abdul Hakim</div>
+        </div>
+      </a>
+      <a href={me.github} target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-info">
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">Abdul222002</div>
+        </div>
+      </a>
+      <a href={me.wordpress} target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon">🌐</div>
+        <div class="contact-info">
+          <div class="contact-label">WordPress</div>
+          <div class="contact-value">Centro Formación</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <Footer />
 </Layout>
- 

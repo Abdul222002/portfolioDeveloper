@@ -9,9 +9,11 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^5.1.10"
+    "@astrojs/check": "^0.9.9",
+    "astro": "^6.3.1",
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.0.4"
+    "@astrojs/vercel": "^10.0.6"
   }
 }

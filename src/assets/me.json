@@ -1,35 +1,136 @@
 {
   "nombre": "Abdul Hakim Byaz Iglesias",
-  "profesion": "Estudiante de GCFS DAW",
-  "bio": "Soy un estudiante de programación de Granada, actualmente cursando estudios en el IES HLANZ. ¡Genial, verdad? Me apasiona la tecnología y disfruto explorando nuevas tendencias en el desarrollo de software. Mi enfoque está en construir soluciones innovadoras y aprender continuamente para mantenerme al día en este campo en constante evolución.",
-  "experiencia": [
+  "profesion": "Full Stack Web Developer",
+  "profesionEn": "Full Stack Web Developer",
+  "ubicacion": "Granada, España",
+  "email": "hakimbyaz@gmail.com",
+  "telefono": "642 14 56 51",
+  "linkedin": "https://www.linkedin.com/in/abdul-hakim-byaz-iglesias/",
+  "github": "https://github.com/Abdul222002",
+  "wordpress": "https://centroformacionlascanteras.org/",
+  "carnet": "Carnet de conducir B",
+  "bio": "Desarrollador web full stack especializado en aplicaciones web modernas, despliegue de proyectos y tecnologías backend/frontend. Experiencia trabajando con React, FastAPI, Docker, WordPress y bases de datos SQL.",
+  "bioExtendida": "Acostumbrado a trabajar tanto en entornos Linux como Windows, utilizando herramientas de desarrollo, terminales, contenedores Docker y despliegues en plataformas cloud como Railway y Vercel. He desarrollado proyectos completos full stack integrando APIs, autenticación, bases de datos, arquitecturas dockerizadas y funcionalidades avanzadas relacionadas con IA, automatizaciones y chatbots. Capacidad de aprendizaje rápida, resolución de problemas y adaptación a diferentes tecnologías y entornos de trabajo.",
+  "tecnologias": {
+    "frontend": [
+      { "nombre": "React", "icono": "⚛️" },
+      { "nombre": "TypeScript", "icono": "🔷" },
+      { "nombre": "JavaScript", "icono": "🟨" },
+      { "nombre": "HTML5", "icono": "🌐" },
+      { "nombre": "CSS3", "icono": "🎨" },
+      { "nombre": "Tailwind CSS", "icono": "💨" },
+      { "nombre": "Vite", "icono": "⚡" }
+    ],
+    "backend": [
+      { "nombre": "FastAPI", "icono": "🚀" },
+      { "nombre": "Node.js", "icono": "🟩" },
+      { "nombre": "PHP", "icono": "🐘" },
+      { "nombre": "Symfony", "icono": "🎵" },
+      { "nombre": "Python", "icono": "🐍" },
+      { "nombre": "APIs REST", "icono": "🔗" },
+      { "nombre": "JWT", "icono": "🔐" }
+    ],
+    "basesdatos": [
+      { "nombre": "MySQL", "icono": "🗄️" },
+      { "nombre": "MariaDB", "icono": "🐬" }
+    ],
+    "devops": [
+      { "nombre": "Docker", "icono": "🐳" },
+      { "nombre": "Docker Compose", "icono": "📦" },
+      { "nombre": "Git", "icono": "📂" },
+      { "nombre": "GitHub", "icono": "🐙" },
+      { "nombre": "Linux", "icono": "🐧" },
+      { "nombre": "Bash", "icono": "💻" },
+      { "nombre": "Railway", "icono": "🚂" },
+      { "nombre": "Vercel", "icono": "▲" }
+    ],
+    "ia": [
+      { "nombre": "n8n", "icono": "🔄" },
+      { "nombre": "APIs IA", "icono": "🤖" },
+      { "nombre": "Chatbots", "icono": "💬" },
+      { "nombre": "RAGs", "icono": "🧠" }
+    ]
+  },
+  "formacion": [
     {
-      "nombre": "Vinos C.D.",
-      "descripcion": ["Reparto de vinos", "Atención al cliente"],
-      "fecha": "2023/2024"
-    },
-    {
-      "nombre": "Radio Onda Electrodoméstico",
-      "descripcion": ["Reparto de electrodomésticos", "Carga y descarga de mercancías"],
-      "fecha": "2020/2023"
-    },
-    {
-      "nombre": "Dependiente Multicentro",
-      "descripcion": [
-        "Atención al cliente",
-        "Montaje de escaparates",
-        "Recuento de mercancías",
-        "Decoración de estancias"
-      ],
-      "fecha": "2018/2019"
+      "titulo": "CFGS Desarrollo de Aplicaciones Web (DAW)",
+      "centro": "IES Hermenegildo Lanz",
+      "ubicacion": "Granada",
+      "fecha": "Septiembre 2024 – Junio 2026",
+      "descripcion": "Formación integral en desarrollo web full stack cubriendo tecnologías frontend y backend, bases de datos, DevOps, despliegues en la nube, automatizaciones con IA y metodologías de desarrollo modernas."
     }
   ],
-  "habilidades": [
-    "Manejo de Office",
-    "Carnet B de coche",
-    "Programación en Java",
-    "Programación en Python",
-    "Microsoft Office",
-    "Carnet de Vehículo Elevador"
-  ]
+  "proyectos": [
+    {
+      "titulo": "Ultimate Fantasy Legends",
+      "subtitulo": "Proyecto Final DAW",
+      "descripcion": "Plataforma fantasy football full stack basada en la Scottish Premiership con mercado dinámico, sistema PvP, economía virtual y sincronización con datos reales.",
+      "github": "https://github.com/Abdul222002/ProyectoFinCurso",
+      "tecnologias": ["React", "FastAPI", "Python", "MySQL", "Docker Compose", "JWT", "APIs REST", "Nginx"],
+      "funcionalidades": [
+        "Sistema completo de autenticación con JWT",
+        "Gestión de ligas y usuarios",
+        "Mercado de fichajes en tiempo real",
+        "Arena PvP con ranking ELO",
+        "Integración con APIs externas de fútbol",
+        "Arquitectura completamente dockerizada",
+        "Backend API REST completo",
+        "Panel de administración",
+        "Sistema de notificaciones en tiempo real"
+      ],
+      "destacado": true
+    },
+    {
+      "titulo": "Centro Formación Las Canteras",
+      "subtitulo": "Desarrollo Web WordPress",
+      "descripcion": "Desarrollo y personalización completa de una página web profesional utilizando WordPress para un centro de formación.",
+      "url": "https://centroformacionlascanteras.org/",
+      "tecnologias": ["WordPress", "PHP", "CSS", "Hosting", "SEO"],
+      "funcionalidades": [
+        "Gestión completa de hosting y dominio",
+        "Configuración y personalización web",
+        "Optimización de contenido y SEO",
+        "Gestión de plugins y extensiones",
+        "Diseño responsive adaptativo"
+      ],
+      "destacado": false
+    }
+  ],
+  "experienciaLaboral": [
+    {
+      "puesto": "Repartidor e Instalador",
+      "empresa": "Radio Onda Electrodomésticos",
+      "fecha": "2020 – 2023",
+      "tareas": [
+        "Reparto a domicilio de electrodomésticos",
+        "Instalación de equipos en cliente",
+        "Atención al cliente y resolución de incidencias"
+      ]
+    },
+    {
+      "puesto": "Dependiente",
+      "empresa": "Sarah Multiprecios",
+      "fecha": "2018 – 2019",
+      "tareas": [
+        "Atención al cliente",
+        "Gestión de caja registradora",
+        "Reposición y organización de tienda"
+      ]
+    }
+  ],
+  "idiomas": [
+    { "idioma": "Español", "nivel": "Nativo" },
+    { "idioma": "Inglés", "nivel": "B2" }
+  ],
+  "competencias": [
+    "Resolución de problemas",
+    "Adaptación rápida a nuevas tecnologías",
+    "Trabajo en equipo",
+    "Aprendizaje autónomo",
+    "Comunicación efectiva",
+    "Capacidad analítica",
+    "Gestión de proyectos",
+    "Organización y responsabilidad"
+  ],
+  "objetivoProfesional": "Busco una oportunidad como desarrollador web donde poder seguir creciendo profesionalmente y aportar conocimientos en desarrollo web moderno, backend, frontend, despliegue de aplicaciones y tecnologías actuales relacionadas con software e inteligencia artificial."
 }

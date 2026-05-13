@@ -6,21 +6,39 @@ import "../styles/global.css"
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio Abdul</title>
+		<title>Abdul Hakim Byaz Iglesias — Full Stack Developer</title>
+		<meta name="description" content="Portfolio de Abdul Hakim Byaz Iglesias — Desarrollador Web Full Stack especializado en React, FastAPI, Docker y tecnologías modernas. Granada, España." />
+		<meta name="keywords" content="desarrollador web, full stack, react, fastapi, docker, portfolio, granada" />
+		<meta property="og:title" content="Abdul Hakim Byaz Iglesias — Full Stack Developer" />
+		<meta property="og:description" content="Desarrollador Web Full Stack especializado en aplicaciones web modernas, despliegue y tecnologías backend/frontend." />
+		<meta property="og:type" content="website" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	</head>
 	<body>
 		<slot />
+		<script>
+			// Scroll animations
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+			document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+		</script>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
+	html, body {
 		margin: 0;
 		width: 100%;
-		height: 100%;	
+		min-height: 100%;
 	}
 </style>
